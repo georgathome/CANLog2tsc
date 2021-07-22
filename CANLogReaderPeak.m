@@ -1,7 +1,8 @@
 classdef CANLogReaderPeak < CANLogReader
-%CANLOGREADERPEAK	Import CAN log files in PEAK Systems format.
-%	OBJ = CANLOGREADERPEAK(FILENAME) create an instance of class
-%	CANLOGREADERPEAK for the log file FILENAME.
+% CANLOGREADERPEAK	Import CAN log files in PEAK Systems format.
+% 
+%	CANLogReaderPeak Methods:
+%	CANLogReaderPeak - Constructor.
 % 
 %	See also CANLOGREADER.
 
@@ -20,10 +21,13 @@ classdef CANLogReaderPeak < CANLogReader
 	end%properties
 	
 	
-	
 	methods
 		
 		function obj = CANLogReaderPeak(filename)
+		% CANLOGREADERPEAK	Class Constructor.
+		%	OBJ = CANLOGREADERPEAK(FILENAME) create an instance of class
+		%	CANLOGREADERPEAK with log file FILENAME.
+		% 
 			
 			% Create object by calling superclass constructor
 			obj = obj@CANLogReader(filename);
@@ -35,7 +39,7 @@ classdef CANLogReaderPeak < CANLogReader
 					'The FILEVERSION keyword has a value of %s. ',...
 					'Only trace files with a value of 1.1 are tested. ',...
 					'Use results with care!'];
-				warning(warnmsg, obj.HeaderInfo.FileVersion);
+				warning(warnmsg, obj.FileVersion);
 			end%if
 			
 		end%CONSTRUCTOR

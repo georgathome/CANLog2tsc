@@ -4,25 +4,26 @@ classdef (InferiorClasses = {?CANMsgDef}) CANLogReader
 %	which calles this superclass constructor method. The file to be
 %	imported is specified via its filename FILENAME.
 % 	
-%	CANLOGREADER Properties:
-%	  FILENAME - The name of the log file.
-%	  FILEPATH - The path of the log file.
-%	  MACHINEFMT - The machine format used to process the log file.
-%	  ENCODING - The file encoding used to process the log file.
-%	  HEADERLINES - The header lines of the log file.
-%	  HEADERINFO - Log file info extracted from HEADERLINES.
+%	CANLogReader Properties:
+%	  Filename - The name of the log file.
+%	  Filepath - The path of the log file.
+%	  MachineFmt - The machine format used to process the log file.
+%	  Encoding - The file encoding used to process the log file.
+%	  HeaderLines - The header lines of the log file.
+%	  DateTime	- Logfile date/time.
+%	  FileVersion - Logfile version.
 % 
-%	CANLOGREADER Methods:
+%	CANLogReader Methods:
 %	  CONVERT2TSC - Convert log file to timeseries collection.
-%	  TABLE - Import log file as table.
-%	  TIMETABLE - Import log file as timetable.
-%	  READ - Import log file as structure.
+%	  table - Import log file as table.
+%	  timetable - Import log file as timetable.
+%	  read - Import log file as structure.
 % 	
 %	NOTE: This class is abstract and can not be instantiated!
 % 	
 %	Compatibility: R2016b
 % 	
-%	See also: CANLOGREADERPEAK, CANLOGREADERXYLON.
+%	See also: CANLOGREADERPEAK, CANLOGREADERASC.
 	
 	
 	properties (SetAccess = private)
